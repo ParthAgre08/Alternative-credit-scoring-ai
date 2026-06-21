@@ -1,0 +1,316 @@
+Bro, this is actually much better than the earlier flow. You're starting to think like a product designer.
+
+I would structure it like this:
+
+```text
+Landing Page
+    ↓
+Check Alternative Credit Score
+    ↓
+Personal Details
+    ↓
+Financial Details
+    ↓
+Upload Documents
+    ↓
+Data Processing
+    ↓
+Feature Extraction
+    ↓
+Alternative Credit Score Generation
+    ↓
+Credit Report Dashboard
+```
+
+---
+
+## 1. Landing Page
+
+Hero Section:
+
+```text
+Alternative Credit Scoring Platform
+
+Get your creditworthiness assessed even if you
+have little or no credit history.
+
+[ Check My Score ]
+```
+
+---
+
+## 2. Personal Details
+
+Collect:
+
+```text
+Name
+Age
+Occupation
+
+○ Student
+○ Freelancer
+○ Salaried
+○ Business Owner
+```
+
+Purpose:
+
+* User profiling
+* Future model feature
+
+---
+
+## 3. Financial Details
+
+Collect:
+
+```text
+Monthly Income
+
+Monthly Expenses
+
+Current Savings
+
+Existing Debt (optional)
+
+Current Bank Balance
+```
+
+---
+
+## 4. Upload Documents
+
+This is where the real data comes.
+
+Upload:
+
+```text
+Bank Statement PDF
+
+CSV Transaction File
+
+UPI Transaction Export
+
+Bill Payment History
+```
+
+For hackathon:
+
+```text
+CSV Upload
+```
+
+is enough.
+
+No need to build bank integrations.
+
+---
+
+## 5. Backend Processing
+
+Flask receives file.
+
+Using Pandas:
+
+```python
+df = pd.read_csv(...)
+```
+
+Extract:
+
+```text
+Income Transactions
+
+Expense Transactions
+
+Savings
+
+Transaction Frequency
+
+Average Balance
+
+Cash Flow
+```
+
+---
+
+## 6. Feature Extraction
+
+This is the most important screen internally.
+
+Generate:
+
+```text
+Income Stability Score
+
+Savings Ratio
+
+Spending Ratio
+
+Cash Flow Score
+
+Payment Discipline Score
+```
+
+Example:
+
+```text
+Income Stability : 92%
+
+Savings Ratio : 28%
+
+Late Payments : 0
+
+Cash Flow : Positive
+```
+
+---
+
+## 7. Score Generation
+
+Model outputs:
+
+```text
+Alternative Credit Score
+
+784 / 900
+```
+
+Risk:
+
+```text
+Low Risk
+```
+
+---
+
+## 8. Dashboard (This is where judges get impressed)
+
+### Credit Score Card
+
+```text
+Alternative Score
+
+784
+```
+
+---
+
+### Risk Level
+
+```text
+Low Risk
+```
+
+---
+
+### Financial Health
+
+```text
+Excellent
+```
+
+---
+
+### Graphs
+
+Chart 1
+
+```text
+Income vs Expense
+```
+
+Chart 2
+
+```text
+Savings Trend
+```
+
+Chart 3
+
+```text
+Cash Flow Trend
+```
+
+Chart 4
+
+```text
+Risk Breakdown
+```
+
+---
+
+### AI Insights
+
+Gemini/OpenAI:
+
+```text
+Why is my score 784?
+
+✓ Stable income
+
+✓ Strong savings habit
+
+✓ Positive cash flow
+
+✓ No late payments
+```
+
+---
+
+### Score Improvement Suggestions
+
+```text
+Increase savings by 5%
+
+Maintain average balance
+
+Continue timely bill payments
+```
+
+---
+
+## One Thing I Would Add
+
+After score generation:
+
+```text
+Loan Eligibility Estimator
+```
+
+Example:
+
+```text
+Personal Loan Eligibility
+
+Alternative Score: 784
+
+Risk: Low
+
+Estimated Approval Chance: 87%
+```
+
+Judges love this because now the score has a practical use.
+
+---
+
+### MVP for Hackathon
+
+Don't build everything initially.
+
+Build in this order:
+
+```text
+1. Landing Page
+2. Personal Details Form
+3. Financial Details Form
+4. CSV Upload
+5. Flask Processing
+6. Score Generation
+7. Dashboard
+8. Graphs
+9. AI Explanation
+```
+
+That is enough for a very solid fintech hackathon project.
